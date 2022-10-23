@@ -1,0 +1,152 @@
+* {
+    user-select: none;
+}
+/* not copy text */
+#form-laravel{
+    background-color: #282828;
+}
+#form-laravel .container-form{
+    padding: 4vw 5vw;
+}
+#form-laravel .box-form .bg-form form .row{
+    --bs-gutter-x: 3.5rem;
+}
+#form-laravel .box-form
+{
+    background: url(../../assets/images/background-form.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#form-laravel .box-form .bg-form{
+    background-color: #fff;
+    padding: 3vw 4vw;
+}
+label.form-label{
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.btn{
+    background-color: #319e5e;
+    color: #fff;
+    font-size: 14px;
+    text-transform: uppercase;
+    font-weight: bold;
+    padding: 10px 40px;
+    border-radius: 5px;
+    border:1px solid #319e5e;
+}
+.btn-reset{
+    background-color: #fff;
+    border:2px solid #ebebeb;
+    color: #999999;
+    margin-left: 20px;
+}
+.btn-reset:hover{
+    background-color: #319e5e!important;
+    color: #fff!important;
+}
+.btn-submit:hover{
+    opacity: .7!important;
+    background-color: #319e5e!important;
+    color:#fff!important;
+    border:1px solid #319e5e!important;
+}
+.form-check{
+    display: table-cell;
+    padding-right: 30px;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+.form-check-input:checked{
+    background-color: #319e5e;
+    border-color: #319e5e;
+}
+.form-control,.form-select{
+    padding: 10px;
+    border:2px solid #ebebeb;
+}
+.form-control:focus,.form-select:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #319e5e;
+    outline: 0;
+    box-shadow: unset;
+}
+select option{
+    background: #319e5e; 
+    color: #fff; 
+    box-shadow: inset 20px 20px #319e5e
+  } 
+  
+select option:hover {
+color: #000; 
+background: #f00!important; 
+box-shadow: 0 0 10px 100px #fff inset!important;
+}
+.alert.alert-danger{
+    padding: 10px;
+    font-size: 14px;
+    margin-top: 5px;
+}
+span.valid{
+    color: red;
+    padding-left: 2px;
+    font-weight: bold;
+}
+.donate-box{
+    position: relative;
+}
+.donate-box .box{
+    position: absolute;
+    top: 35px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: inline-flex;
+    font-weight: bold;
+    color: #fff;
+    cursor:pointer;
+}
+.donate-box .box:hover{
+    display: none;
+}
+.donate-box .box .arrow{
+    padding: 0 10px;
+}
+.donate-box .box .number{
+}
+#custom-handle {
+    width: 3em;
+    height: 1.6em;
+    top: 50%;
+    margin-top: -.8em;
+    text-align: center;
+    line-height: 1.6em;
+}
+input[type="range"] {
+    -webkit-appearance: none;
+    background: #f8f8f8;
+    width: 100%;
+    height: 7px;
+    border-radius: 5px;
+    background-image: linear-gradient(#319e5e, #319e5e);
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    position: relative;
+  }
+input[type="range"]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    height: 40px;
+    width: 120px;
+    padding: 10px 40px;
+    border-radius: 5px;
+    background: #319e5e;
+    cursor:pointer;
+    box-shadow: 0 0 2px 0 #555;
+    position: relative;
+}
+.datepicker table tr td span.active{
+    background-color: #319e5e!important;
+    background-image: unset!important;
+}
+  
