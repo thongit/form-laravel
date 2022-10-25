@@ -101,20 +101,33 @@ span.valid{
 }
 .donate-box{
     position: relative;
+    transform-origin: center center;
+}
+.donate-box::after{
+    display: block;
 }
 .donate-box .box{
     position: absolute;
-    top: 35px;
+    top: 27px;
     left: 50%;
     transform: translateX(-50%);
     display: inline-flex;
     font-weight: bold;
     color: #fff;
     cursor:pointer;
+    height: 40px;
+    width: 120px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 5px;
+    background: #319e5e;
+    cursor:pointer;
+    box-shadow: 0 0 2px 0 #555;
 }
-.donate-box .box:hover{
+/* .donate-box .box:hover{
     display: none;
-}
+} */
 .donate-box .box .arrow{
     padding: 0 10px;
 }
@@ -149,6 +162,10 @@ input[type="range"]::-webkit-slider-thumb {
     cursor:pointer;
     box-shadow: 0 0 2px 0 #555;
     position: relative;
+    background-color: transparent;
+    z-index: 1;
+    border: none!important;
+    box-shadow:none!important;
 }
 .datepicker table tr td span.active{
     background-color: #319e5e!important;

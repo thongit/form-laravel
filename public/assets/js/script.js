@@ -5,7 +5,7 @@ $(document).ready(function(){
         minViewMode: "months"
     }); // input year month
 
-    $('#donate').change(function(){
+    $('#donate').bind('mousemove',function(){
         var val=$(this).val();
         var min= $('#donate').attr('min');
         var max= $('#donate').attr('max');
@@ -25,7 +25,7 @@ $(document).ready(function(){
         }
         $('.box .number').text(""+val+"");
     });//input range
-    
+
     $('.btn-reset').click(function(){
         $('#donate').css({"background-size":'50% 100%'});
         $('.box').css({"left": "50%"});
