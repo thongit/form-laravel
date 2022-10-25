@@ -11,11 +11,13 @@
 #form-laravel .box-form .bg-form form .row{
     --bs-gutter-x: 3.5rem;
 }
-#form-laravel .box-form
-{
-    background: url(../../assets/images/background-form.jpg);
+#form-laravel .box-form .bg-left{
+    background: url(../../assets/images/bg.jpeg);
     background-size: cover;
     background-repeat: no-repeat;
+}
+#form-laravel .box-form{
+    
 }
 #form-laravel .box-form .bg-form{
     background-color: #fff;
@@ -84,10 +86,13 @@ color: #000;
 background: #f00!important; 
 box-shadow: 0 0 10px 100px #fff inset!important;
 }
-.alert.alert-danger{
+/* .alert.alert-danger{
     padding: 10px;
     font-size: 14px;
     margin-top: 5px;
+} */
+.invalid-feedback{
+    display: block;
 }
 span.valid{
     color: red;

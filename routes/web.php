@@ -12,9 +12,5 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/', function () {
-    return view('form');
-});
-Route::get('/', 'FormController@validationForm')->name('get-validation-form');
-Route::post('/', 'FormController@validationForm')->name('post-validation-form');
+Route::get('/', 'DonateController@index');
+Route::post('/', 'DonateController@store');

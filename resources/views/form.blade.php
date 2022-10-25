@@ -13,7 +13,7 @@
   <section id="form-laravel">
     <div class="container-form">
       <div class="row box-form justify-content-md-center">
-        <div class="col-md-3"> 
+        <div class="col-md-3 bg-left">
         </div>
         <div class="col-md-9 bg-form">
           <form action="" class="" method="post">
@@ -22,21 +22,21 @@
                 <div class="col-md-6">
 
                   <div class="mb-3 mt-3">
-                    <label for="fname" class="form-label">first name</label><span class="valid">*</span>
-                    <input type="text" class="form-control" value="{{ old('fname') }}" id="fname" name="fname">
-                    @if ($errors->has('fname'))
-                      <div class="alert alert-danger">
-                      {{ $errors->first('fname') }}
+                    <label for="first_name" class="form-label">first name</label><span class="valid">*</span>
+                    <input type="text" class="form-control" value="{{ old('first_name') }}" id="fname" name="first_name">
+                    @if ($errors->has('first_name'))
+                      <div class="invalid-feedback">
+                      {{ $errors->first('first_name') }}
                       </div>
                     @endif
                   </div>
 
                   <div class="mb-3 mt-3">
-                    <label for="lname" class="form-label">last name</label><span class="valid">*</span>
-                    <input type="text" class="form-control" value="{{ old('lname') }}" id="lname" name="lname">
-                    @if ($errors->has('lname'))
-                      <div class="alert alert-danger">
-                      {{ $errors->first('lname') }}
+                    <label for="last_name" class="form-label">last name</label><span class="valid">*</span>
+                    <input type="text" class="form-control" value="{{ old('last_name') }}" id="lname" name="last_name">
+                    @if ($errors->has('last_name'))
+                      <div class="invalid-feedback">
+                      {{ $errors->first('last_name') }}
                       </div>
                     @endif
                   </div>
@@ -45,7 +45,7 @@
                     <label for="company" class="form-label">company</label><span class="valid">*</span>
                     <input type="text" class="form-control" value="{{ old('company') }}" id="company" name="company">
                     @if ($errors->has('company'))
-                      <div class="alert alert-danger">
+                      <div class="invalid-feedback">
                       {{ $errors->first('company') }}
                       </div>
                     @endif
@@ -55,7 +55,7 @@
                     <label for="email" class="form-label">email</label><span class="valid">*</span>
                     <input type="email" class="form-control" value="{{ old('email') }}" id="email" name="email">
                     @if ($errors->has('email'))
-                      <div class="alert alert-danger">
+                      <div class="invalid-feedback">
                       {{ $errors->first('email') }}
                       </div>
                     @endif
@@ -65,7 +65,7 @@
                     <label for="phone" class="form-label">phone number</label><span class="valid">*</span>
                     <input type="tel" class="form-control" value="{{ old('phone') }}" id="phone" name="phone">
                     @if ($errors->has('phone'))
-                      <div class="alert alert-danger">
+                      <div class="invalid-feedback">
                       {{ $errors->first('phone') }}
                       </div>
                     @endif
@@ -81,7 +81,7 @@
                         <option {{old('gender') == 2 ? "selected" : ""}} value="2">Female</option>
                     </select>
                     @if ($errors->has('gender'))
-                      <div class="alert alert-danger">
+                      <div class="invalid-feedback">
                       {{ $errors->first('gender') }}
                       </div>
                     @endif
@@ -90,25 +90,25 @@
                   <div class="mb-3 mt-3">
                     <label for="gender" class="form-label">payment mode</label><span class="valid">*</span>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" id="" value="visa" name="payment" checked>
+                        <input type="radio" class="form-check-input" id="visa" value="visa" name="payment" {{old('payment') == 'visa' ? "checked" : ""}} checked>
                         <label class="form-check-label" for="">Visa</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" id="" value="mastercard" name="payment">
+                        <input type="radio" class="form-check-input" id="" value="mastercard" name="payment" {{old('payment') == 'mastercard' ? "checked" : ""}}>
                         <label class="form-check-label" for="">Mastercard</label>
                     </div>
                     <div class="form-check">
-                        <input type="radio" class="form-check-input" id="" value="amex" name="payment">
+                        <input type="radio" class="form-check-input" id="" value="amex" name="payment" {{old('payment') == 'amex' ? "checked" : ""}}>
                         <label class="form-check-label" for="">Amex</label>
                     </div>
                   </div>
 
                   <div class="mb-3 mt-3">
-                    <label for="card-number" class="form-label">card number</label><span class="valid">*</span>
-                    <input type="text" class="form-control" value="{{ old('cardNumber') }}" id="card-number" name="cardNumber">
-                    @if ($errors->has('cardNumber'))
-                      <div class="alert alert-danger">
-                      {{ $errors->first('cardNumber') }}
+                    <label for="card_number" class="form-label">card number</label><span class="valid">*</span>
+                    <input type="text" class="form-control" value="{{ old('cardNumber') }}" id="card-number" name="card_number">
+                    @if ($errors->has('card_number'))
+                      <div class="invalid-feedback">
+                      {{ $errors->first('card_number') }}
                       </div>
                     @endif
                   </div>
@@ -117,7 +117,7 @@
                     <label for="expiration" class="form-label">expiration</label><span class="valid">*</span>
                     <input type="text" id="datepicker" class="form-control" value="{{ old('expiration') }}" id="expiration" name="expiration">
                     @if ($errors->has('expiration'))
-                      <div class="alert alert-danger">
+                      <div class="invalid-feedback">
                       {{ $errors->first('expiration') }}
                       </div>
                     @endif
@@ -127,7 +127,7 @@
                     <label for="cvn" class="form-label">cvn</label><span class="valid">*</span>
                     <input type="text" class="form-control" value="{{ old('cvn') }}" id="cvn" name="cvn">
                     @if ($errors->has('cvn'))
-                      <div class="alert alert-danger">
+                      <div class="invalid-feedback">
                       {{ $errors->first('cvn') }}
                       </div>
                     @endif

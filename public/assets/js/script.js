@@ -30,9 +30,11 @@ $(document).ready(function(){
         $('#donate').css({"background-size":'50% 100%'});
         $('.box').css({"left": "50%"});
         $('.box .number').text("500");
-        $('.alert-danger').css({"display": "none"});
+        $('.invalid-feedback').css({"display": "none"});
         $('input').attr('value', '');
         $('#gender option').attr('selected',false);
         $('#gender option:first').attr('selected',true);
+        $('.form-check-input').attr('checked',false);
+        $('#visa').attr('checked',true);
     });//reset form
 });
