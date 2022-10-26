@@ -31,6 +31,8 @@ $(document).ready(function(){
         $('.box').css({"left": "50%"});
         $('.box .number').text("500");
         $('.invalid-feedback').css({"display": "none"});
+        $('.form-control').removeClass('is-invalid').addClass('');
+        $('.form-control').removeClass('is-valid').addClass('');
         $('input').attr('value', '');
         $('#gender option').attr('selected',false);
         $('#gender option:first').attr('selected',true);

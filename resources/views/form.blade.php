@@ -23,7 +23,7 @@
 
                   <div class="mb-3 mt-3">
                     <label for="first_name" class="form-label">first name</label><span class="valid">*</span>
-                    <input type="text" class="form-control" value="{{ old('first_name') }}" id="fname" name="first_name">
+                    <input type="text" class="form-control @if($errors->has('first_name')) is-invalid @elseif ($errors->any() && !$errors->has('first_name')) is-valid @else  @endif" value="{{ old('first_name') }}" id="fname" name="first_name">
                     @if ($errors->has('first_name'))
                       <div class="invalid-feedback">
                       {{ $errors->first('first_name') }}
@@ -33,7 +33,7 @@
 
                   <div class="mb-3 mt-3">
                     <label for="last_name" class="form-label">last name</label><span class="valid">*</span>
-                    <input type="text" class="form-control" value="{{ old('last_name') }}" id="lname" name="last_name">
+                    <input type="text" class="form-control @if($errors->has('last_name')) is-invalid @elseif ($errors->any() && !$errors->has('last_name')) is-valid @else  @endif" value="{{ old('last_name') }}" id="lname" name="last_name">
                     @if ($errors->has('last_name'))
                       <div class="invalid-feedback">
                       {{ $errors->first('last_name') }}
@@ -43,7 +43,7 @@
 
                   <div class="mb-3 mt-3">
                     <label for="company" class="form-label">company</label><span class="valid">*</span>
-                    <input type="text" class="form-control" value="{{ old('company') }}" id="company" name="company">
+                    <input type="text" class="form-control @if($errors->has('company')) is-invalid @elseif ($errors->any() && !$errors->has('company')) is-valid @else  @endif" value="{{ old('company') }}" id="company" name="company">
                     @if ($errors->has('company'))
                       <div class="invalid-feedback">
                       {{ $errors->first('company') }}
@@ -53,7 +53,7 @@
 
                   <div class="mb-3 mt-3">
                     <label for="email" class="form-label">email</label><span class="valid">*</span>
-                    <input type="email" class="form-control" value="{{ old('email') }}" id="email" name="email">
+                    <input type="email" class="form-control @if($errors->has('email')) is-invalid @elseif ($errors->any() && !$errors->has('email')) is-valid @else  @endif" value="{{ old('email') }}" id="email" name="email">
                     @if ($errors->has('email'))
                       <div class="invalid-feedback">
                       {{ $errors->first('email') }}
@@ -63,7 +63,7 @@
 
                   <div class="mb-3 mt-3">
                     <label for="phone" class="form-label">phone number</label><span class="valid">*</span>
-                    <input type="tel" class="form-control" value="{{ old('phone') }}" id="phone" name="phone">
+                    <input type="tel" class="form-control @if($errors->has('phone')) is-invalid @elseif ($errors->any() && !$errors->has('phone')) is-valid @else  @endif" value="{{ old('phone') }}" id="phone" name="phone">
                     @if ($errors->has('phone'))
                       <div class="invalid-feedback">
                       {{ $errors->first('phone') }}
@@ -75,7 +75,7 @@
                 <div class="col-md-6">
                   <div class="mb-3 mt-3">
                     <label for="gender" class="form-label">gender</label><span class="valid">*</span>
-                    <select class="form-select" id="gender" name="gender">
+                    <select class="form-select form-control @if($errors->has('gender')) is-invalid @elseif ($errors->any() && !$errors->has('gender')) is-valid @else  @endif" id="gender" name="gender">
                         <option selected disabled value=""></option>
                         <option {{old('gender') == 1 ? "selected" : ""}}  value="1">Male</option>
                         <option {{old('gender') == 2 ? "selected" : ""}} value="2">Female</option>
@@ -105,7 +105,7 @@
 
                   <div class="mb-3 mt-3">
                     <label for="card_number" class="form-label">card number</label><span class="valid">*</span>
-                    <input type="text" class="form-control" value="{{ old('cardNumber') }}" id="card-number" name="card_number">
+                    <input type="text" class="form-control @if($errors->has('card_number')) is-invalid @elseif ($errors->any() && !$errors->has('card_number')) is-valid @else  @endif" value="{{ old('cardNumber') }}" id="card-number" name="card_number">
                     @if ($errors->has('card_number'))
                       <div class="invalid-feedback">
                       {{ $errors->first('card_number') }}
@@ -115,7 +115,7 @@
 
                   <div class="mb-3 mt-3" >
                     <label for="expiration" class="form-label">expiration</label><span class="valid">*</span>
-                    <input type="text" id="datepicker" class="form-control" value="{{ old('expiration') }}" id="expiration" name="expiration">
+                    <input type="text" id="datepicker" class="form-control @if($errors->has('expiration')) is-invalid @elseif ($errors->any() && !$errors->has('expiration')) is-valid @else  @endif" value="{{ old('expiration') }}" id="expiration" name="expiration">
                     @if ($errors->has('expiration'))
                       <div class="invalid-feedback">
                       {{ $errors->first('expiration') }}
@@ -125,7 +125,7 @@
 
                   <div class="mb-3 mt-3">
                     <label for="cvn" class="form-label">cvn</label><span class="valid">*</span>
-                    <input type="text" class="form-control" value="{{ old('cvn') }}" id="cvn" name="cvn">
+                    <input type="text" class="form-control @if($errors->has('cvn')) is-invalid @elseif ($errors->any() && !$errors->has('cvn')) is-valid @else  @endif" value="{{ old('cvn') }}" id="cvn" name="cvn">
                     @if ($errors->has('cvn'))
                       <div class="invalid-feedback">
                       {{ $errors->first('cvn') }}
